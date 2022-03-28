@@ -6,7 +6,7 @@ var sassMiddleware = require('node-sass-middleware');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const meepsRouter = require('./routes/meeps');
+const bodyRouter = require('./routes/body');
 
 var app = express();
 
@@ -24,6 +24,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/meeps', meepsRouter);
+app.use('/body', bodyRouter);
 
 module.exports = app;
