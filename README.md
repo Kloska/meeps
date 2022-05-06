@@ -14,7 +14,8 @@ Idag ska jag läsa på om API:n och hur den fungerar för att kunna skriva en pl
 Jag har inte kunnat förstå apin och känner att det kommer bli för svårt alternativt ta för lång tid att lära mig. Därför har jag bestämt mig att jobba med Meeps och login istället för att få det fungerande och färdigt och sedan styla sidan.
 
 ## 2022-05-06
-Idag har jag gjort en skiss för min meeps sida.
+Idag har jag gjort en skiss för min meeps sida samt satt upp en databas.
+Nästa lektion måste jag kolla igenom min tidigare kod för att komma ihåg vad jag gjorde och börja på att göra färdigt mer av koden.
 
 # Planering
 
