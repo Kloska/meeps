@@ -17,6 +17,9 @@ Jag har inte kunnat förstå apin och känner att det kommer bli för svårt alt
 Idag har jag gjort en skiss för min meeps sida samt satt upp en databas.
 Nästa lektion måste jag kolla igenom min tidigare kod för att komma ihåg vad jag gjorde och börja på att göra färdigt mer av koden.
 
+## 2022-05-16 
+Har jobbat på att sätta upp heroku genom ett nytt sätt eftersom länkningen till github inte längre fungerade pga ett security breach.
+
 # Planering
 
 ## Fredag vecka 18
