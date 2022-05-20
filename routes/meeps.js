@@ -8,8 +8,8 @@ router.get('/', async (req, res, next) => {
         .query('SELECT * FROM meeps')
         .then(([rows, fields]) => {
             res.render('meeps.njk', {
-                meeps: rows,
-                title: "Meeps"
+                meeps: {
+                    data: rows }
             });
         })
         .catch((err) => {
