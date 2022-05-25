@@ -1,6 +1,23 @@
 {% extends layout %}
 {% block  content %}
-    <main>
-        <h1>Här ska det finnas Meeps</h1>
-    </main>
+<main class="container mt-3">
+    <div>
+        <ul class="list-group">
+        {% for body in meeps %}
+            <li class="list-group-item d-flex justify-content-between">
+                {{body.body}}
+                <div class="d-flex">
+                    <div class="form-check me-3">
+                    </div>
+                    <a
+                        href="/meeps/{{meeps.id}}/delete"
+                        class="btn btn-sm btn-danger">
+                        Delete Meep
+                    </a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</main>
 {% endblock %}
