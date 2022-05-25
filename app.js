@@ -8,7 +8,7 @@ const nunjucks = require('nunjucks');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-const meepsRouter = require('.routes/meeps');
+const meepsRouter = require('./routes/meeps');
 
 var app = express();
 
