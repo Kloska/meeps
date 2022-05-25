@@ -2,13 +2,13 @@ const express = require('express');
 const router = express.Router();
 const pool = require('../database');
 
-/* router.get('/', async (req, res, next) => {
+ router.get('/', async (req, res, next) => {
     await pool
         .promise()
         .query('SELECT * FROM meeps')
         .then(([rows, fields]) => {
-            res.render('meeps.njk', {
-                meepsRouter: {
+            res.render('layout.njk', {
+                meeps: {
                     data: rows }
             });
         })
@@ -20,7 +20,7 @@ const pool = require('../database');
                 },
             });
         });
-}); */
+});
 
 /*
 router.get('/:id', async (req, res, next) => {
