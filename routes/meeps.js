@@ -5,7 +5,7 @@ const pool = require('../database');
 router.get('/', async (req, res, next) => {
     await pool
         .promise()
-        .query('SELECT * FROM timlum_meeps')
+        .query('SELECT * FROM meeps')
         .then(([rows, fields]) => {
             res.render('meeps.njk', {
                 meeps: rows,
@@ -18,26 +18,6 @@ router.get('/', async (req, res, next) => {
             res.status(500).json({
                 tasks: {
                     error: 'Error getting Meeps',
-                },
-            });
-        });
-});
-
- router.get('/', async (req, res, next) => {
-    await pool
-        .promise()
-        .query('SELECT * FROM meeps')
-        .then(([rows, fields]) => {
-            res.render('layout.njk', {
-                meeps: {
-                    data: rows }
-            });
-        })
-        .catch((err) => {
-            console.log(err);
-            res.status(500).json({
-                meeps: {
-                    error: 'Error getting meeps',
                 },
             });
         });
