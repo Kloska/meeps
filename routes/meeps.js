@@ -12,6 +12,7 @@ router.get('/', async (req, res, next) => {
                 title: 'Meeps',
                 layout: 'layout.njk',
             });
+            console.log(meeps)
         })
         .catch((err) => {
             console.log(err);
