@@ -5,7 +5,7 @@ const pool = require('../database');
 router.get('/', async (req, res, next) => {
     await pool
         .promise()
-        .query('SELECT * FROM meeps')
+        .query('SELECT * FROM timlum_meeps')
         .then(([rows, fields]) => {
             res.render('meeps.njk', {
                 meeps: rows,
