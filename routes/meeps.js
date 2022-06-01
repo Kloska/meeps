@@ -12,7 +12,7 @@ router.get('/', async (req, res, next) => {
                 title: 'Meeps',
                 layout: 'layout.njk',
             });
-            console.log(meeps)
+            console.log(rows)
         })
         .catch((err) => {
             console.log(err);
