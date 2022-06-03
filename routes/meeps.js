@@ -24,6 +24,37 @@ router.get('/', async (req, res, next) => {
         });
 });
 
+router.post('/', async (req, res, next) => {
+    // { "meep": "koda post" }
+    const meeps = req.body.meeps;
+
+    await pool
+        .promise()
+        .query('INSERT INTO meeps (body, created_at, updated_at) VALUES (?, now(), now())')
+        .then((response) => {
+            if (response[0].affectedRows === 1) {
+                req.session.flash = "Successfully added meep";
+                res.redirect('/meeps');
+            } else {
+                res.status(400).json({
+                    meeps: {
+                        error: 'Invalid meep',
+                    },
+                });
+            }
+        })
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json({
+                meeps: {
+                    error: 'Error posting meep',
+                },
+            });
+        });
+
+    // res.json(req.body);
+});
+
 /*
 router.get('/:id', async (req, res, next) => {
     const id = req.params.id;
